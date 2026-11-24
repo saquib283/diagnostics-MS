@@ -1,0 +1,62 @@
+{
+  "name": "dcms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Diagnostic Consultancy Management System (DCMS) — Production Healthcare & Financial ERP",
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests prisma",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:seed": "tsx prisma/seed.ts"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1176.0",
+    "@aws-sdk/s3-request-presigner": "^3.1176.0",
+    "@hookform/resolvers": "^7.0.8",
+    "@prisma/client": "^6.19.3",
+    "clsx": "^2.1.1",
+    "decimal.js": "^10.6.0",
+    "exceljs": "^4.4.0",
+    "lucide-react": "^1.79.0",
+    "next": "^16.4.6",
+    "nodemailer": "^10.6.1",
+    "pdfkit": "^0.21.0",
+    "qrcode": "^1.5.4",
+    "razorpay": "^2.9.8",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-hook-form": "^7.92.0",
+    "tailwind-merge": "^3.7.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.7",
+    "@playwright/test": "^1.65.1",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/nodemailer": "^8.0.2",
+    "@types/pdfkit": "^0.17.7",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.6",
+    "postcss": "^8.5.33",
+    "prisma": "^6.19.3",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "vitest": "^5.1.1"
+  }
+}
